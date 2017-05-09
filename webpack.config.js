@@ -1,12 +1,15 @@
 const path = require("path");
 const HWP = require("html-webpack-plugin");
+const merge = require("webpack-merge");
+const pug = require("./webpack/pug");
+const devServer = require("./webpack/devserver");
 
 const PATHS = {
 	source: path.join(__dirname, 'source'),
 	build: path.join(__dirname, 'build')
 };
 
-const common = {
+const common = merge({
 	entry: {
 		'index': PATHS.source + '/pages/index/index.js',
 		'blog': PATHS.source + '/pages/blog/blog.js'
@@ -27,33 +30,13 @@ const common = {
 			template: PATHS.source + "/pages/blog/blog.pug"
 		})
 	],
-	module: {
-		rules: [
-			{
-				test: /\.pug$/,
-				loader: 'pug-loader',
-				options: {
-					pretty: true,
-				}
-			}
-		],
-	},
-};
+},pug);
 
-const devConfig = {
-	devServer: {
-		stats: "errors-only",
-		port: 9000
-	}
-};
 
 module.exports = function (env) {
 	if (env === 'production') {
 		return common;
 	} else if (env === 'development') {
-		return Object.assign(
-			{},
-			common,
-			devConfig);
-		}
-	};
+		return merge([common, devServer]);
+	}
+};
