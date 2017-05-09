@@ -5,8 +5,8 @@
   "author": "Livadniy Alex <livalex11@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack",
+    "start": "webpack-dev-server --env development",
+    "build": "webpack --env production",
     "serve": "static build -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
   },
   "devDependencies": {
