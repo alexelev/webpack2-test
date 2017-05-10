@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -83,14 +83,25 @@
 /***/ }),
 /* 1 */,
 /* 2 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: /home/livalex/Документы/Projects/JS/webpack-demo/source/pages/index/index.scss Unexpected token (1:3)\nYou may need an appropriate loader to handle this file type.\n| h1 {\n| \tcolor: pink;\n| }");
+
+/***/ }),
+/* 3 */,
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_menu_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_scss__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_menu_menu_js__ = __webpack_require__(0);
 
 
-const menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_menu_menu_js__["a" /* default */])(["Главная", "Блог"], 'menu');
+
+
+const menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_menu_menu_js__["a" /* default */])(["Главная", "Блог"], 'menu');
 
 document.body.appendChild(menu);
 console.log('index page');

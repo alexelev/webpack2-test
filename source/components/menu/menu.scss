@@ -1,0 +1,19 @@
+.menu {
+	color: gray;
+	font-size: 22px;
+	font-family: Arial;
+
+	li {
+		display: inline-block;
+		list-style-type: none;
+		padding: 5px 10px;
+		border: 1px solid skyblue;
+		background-color: #ccc;
+		transition: all .3s ease;
+		cursor: pointer;
+
+		&:hover {
+			background-color: skyblue;
+		}
+	}
+}

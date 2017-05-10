@@ -1,3 +1,5 @@
+import './menu.scss';
+
 export default function (arr, className) {
 	const menu = document.createElement("ul");
 	menu.classList.add(className);
