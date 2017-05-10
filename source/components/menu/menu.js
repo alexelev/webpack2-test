@@ -1,4 +1,5 @@
 import './menu.scss';
+import 'normalize.css';
 
 export default function (arr, className) {
 	const menu = document.createElement("ul");
