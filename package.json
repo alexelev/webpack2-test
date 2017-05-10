@@ -10,6 +10,7 @@
     "serve": "static build -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}'"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
     "node-static": "^0.7.9",
     "pug": "^2.0.0-rc.1",
